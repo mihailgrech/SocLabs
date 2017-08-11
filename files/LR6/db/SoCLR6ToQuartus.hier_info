@@ -1,0 +1,23 @@
+|Block1
+result <= machine2:inst1.result
+clkFromPin => machine2:inst1.clk
+reset => machine2:inst1.reset
+X => machine2:inst1.x1
+Y => machine2:inst1.x2
+x3 => machine2:inst1.x3
+
+
+|Block1|machine2:inst1
+clk => state~1.DATAIN
+reset => state~3.DATAIN
+x1 => state.DATAB
+x1 => state.DATAB
+x2 => state.OUTPUTSELECT
+x2 => state.OUTPUTSELECT
+x2 => state.OUTPUTSELECT
+x2 => state.OUTPUTSELECT
+x3 => state.DATAA
+x3 => state.DATAA
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
